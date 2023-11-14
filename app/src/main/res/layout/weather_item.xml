@@ -2,13 +2,14 @@
 <androidx.cardview.widget.CardView
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="100dp"
+    android:layout_width="90dp"
     android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/tools"
     card_view:contentPadding="8dp"
+    card_view:cardElevation="4dp"
     card_view:cardCornerRadius="8dp"
-    card_view:cardBackgroundColor="#1f305f"
-    android:layout_margin="5dp"
+    card_view:cardBackgroundColor="@color/color_card"
+    android:layout_margin="10dp"
     app:ignore="NamespaceTypo">
 
 
@@ -26,14 +27,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_editor_absoluteX="20dp"
-            card_view:layout_constraintTop_toTopOf="parent" />
+            card_view:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/normalDesc"/>
 
         <TextView
             android:id="@+id/weather_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="100dp"
-            android:textSize="18sp"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -46,6 +50,8 @@
         <TextView
             android:id="@+id/weather_temperature"
             android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:layout_height="wrap_content"
             android:layout_marginTop="108dp"
             android:textSize="18sp"
